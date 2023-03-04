@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto" , sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container { /* container of flex items */
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline: auto;
+    border: 1px solid #000;
+    display: flex; /* vertical alignment 100px wide each*/
+
+    gap: 1rem;
+    
+    /* justify-content: flex-end; all the way to the left  */
+    /* justify-content: center;allign to the center */
+    /* justify-content: space-around; distributes the gap amoung each block except start and end*/
+    /* justify-content : space-between; gap between each block but 0 gap at the start and finish*/
+    justify-content: space-evenly; /* gap even in the start and at the end */
+
+    /* align-items: flex-start; by default */
+    /* align-items: flex-end; */
+    align-items: center;
+
+    /* flex-direction: column; by default :row */
+    flex-direction: row-reverse;
+    /* by overflow happens when we collapse the window or browser screen */
+    /* flex-wrap: wrap; first method*/
+    flex-flow: row wrap;
+    align-content: flex-start; /* this aligns the row basically we can face multiple row when window is collapsed */
+    /* align content : space between , space around or space evenly are some more function */
+}
+
+.box { /* individual flex item */
+    /* min-width: 100px; */
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; /* it would center the numbers in individual utem */
+
+    /* flex-grow: 1; items will grow at the same amount through out the page */
+    /* flex-shrink: 1; 
+    flex-basis: 350px;  *//* not same as the min-width but act as that*/
+
+    /* in short hand : flex : grow shrink basis */
+    flex: 1 1 250px;
+}
+
+.box:nth-child(2) {
+    /* flex-grow: 2; element two will get twice as much space after 100px distribution  */
+    /* flex-shrink: 2;  */
+
+    flex : 2 2 250px;
+
+    order : 4; /* 2nd child will go to +4 position of it's initial position assume it to be a number line where 2nd child is at 0 index */
+}
+
+
+a {
+    position: fixed;
+    text-align: center;
+    margin : 50px auto 50px;
+}
+
+
+/* ///////////IMPORTANT///////////// */
+
+/* TO PRACTICE THE FLEX BOX PROPERTY VISIT : flexboxfroggy.com */
+
+/* ////////////////////////////////// */

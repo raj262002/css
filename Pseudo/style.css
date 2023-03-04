@@ -1,0 +1,45 @@
+/* Pseudo classes : only single : is used after any elment or class or id 
+                    eg : nav a: active { color:red }
+                    1. :is pseudo class  eg :
+                    nav :is(a:hover , a:focus) is equivalent to nav a:hover , nav a:focus 
+                    2. :any-link -> visited and link same css
+                    3. :where -> does the same thing as :is but doesn't have any specifity
+                    4. :target -> who ever elemwnt is in target or selected will have the property eg:
+                    .card:target { border: 2px solid rebbeccapurple;}
+                    5. :not --> img[alt] -> image having alt tribute
+                        we can check which image does not have alt attribute by using not pseudo class
+                        .card img:not([alt]) { border: 10px solid red; }
+                    6. :nth-child() --> nth element will be selected
+                    7. :hover :active and :focus ->
+                    */
+
+
+/* pseudo element : double : is used (::)
+                    it makes another child element i.e in p::after  where p is the parent element and p::after is its child .
+                    eg: *::after,*::before { }
+                    1. ::after eg
+                        .card figcaption::after {
+                                            content: ' emoji' or open-quote;
+                                            display: block;
+                          }
+                    will display emoji after the content of figcaption as it is set to block it will became block element and will be displayed below the content or element in figcaption . the same thing goes for ::before pseudo element also but now before the figcaption's content and also above it as it is a block level element 
+                    2. ::first-letter --> eg
+                        .card figcation::first-letter {
+                            font-size : 3rem; }
+                            will make the first letter of the word larger same goes with ::first-line pseudo elment */
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "roboto","popins","roboto mono","nunito",sans-serif;
+}

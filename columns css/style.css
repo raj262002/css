@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+}
+
+.coloums{
+    column-count: 4; /*not neccesarry one paragraph in one coloum*/
+
+    column-width: 250px;  /* not neccessary to be 4 columns ...will be very flexible */
+
+    /* columns: 4 250px; does the same work as above */
+
+    column-rule: 3px solid #333; /*rules between columns*/
+
+    column-gap: 3rem; /* spacing between columns */
+
+
+}
+
+.coloums p {
+    margin-top: 0; /*margin collapsing is happening*/
+}
+
+.coloums h2 {
+    margin-top: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem; /*if we will collapse the window the padding of h2 will spilt into columns*/
+    /* to avoid the slipting of padding */
+    break-inside: avoid; 
+    break-before: column; /*h2 heading will always be on the top of the below paragraph*/
+    /* but if we wil collapse it may shrink the columns into three and resize them to small
+    so "break-before" might not be the best thing to do*/
+}
+
+
+/* unicode website : "unicode-table.com" 
+                    best for the icons (fancy) .
+    eg: quote signs ' " " ' */
+.coloums .quote{
+    margin-top: 2rem; /*absolutely no change ? bcoz the specitifity of .coloums p{} is higher than .quote so to get the margin top .columns quote{} would be effextive*/
+    font-size: 2.8rem;
+    text-align: center;
+    color: #333;
+    font-style: bold;
+    column-span: all; /*it will span over all the columns on the page (view it in the live server)*/
+} 
+
+/* we can use white-space : nowrap method instead of br tag in a inline elment or tag like span so that the em dash in front of raj malhotra doesn't breaks from raj malhotra */

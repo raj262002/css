@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ||VARIABLES */
+:root {
+    /* COLOR */
+    --BGCOLOR: #475569;
+    --ALTBBGCOLOR: #1e2938;
+    --RADIALCOLOR: whitesmoke;
+    --LIGHTCOLOR: whitesmoke;
+    --DARKCOLOR: #000;
+    /* SQAURE */
+    --SQUARE-BGCOLOR: papayawhip;
+    --SQUARE-SIZE: max(150px, 20vw);
+    /* FONT */
+    --FF: "Nunito" , sans-serif;
+    --FS: 1.5rem;
+    --FS_XL: 3rem;
+     /* GENERAL */
+     --PADDING : 0.5rem;
+     --SHADOWS:  0 6px 5px -5px var(--DARKCOLOR);
+     --BORDER: 2px solid var(--DARKCOLOR);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --BGCOLOR: #000;
+        --ALT_BGCOLOR: #333;
+        --RADIAL-COLOR: rbg(217,217,217);
+        --SQUARE_BGCOLOR: rgb(202,174,202);
+    }
+}
+
+body{
+    font-family: var(--FF);
+    font-size: var(--FS);
+    min-height: 100vh;
+
+    background-color: var(--BGCOLOR);
+    background-image: radial-gradient(var(--RADIALCOLOR),var(--BGCOLOR));
+    display: flex;
+    flex-direction: column;
+}
+
+header, nav, footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center; 
+}
+
+header, footer {
+    position: sticky;
+    background-color: var(--ALTBBGCOLOR);
+    color: var(--LIGHTCOLOR);
+    border-bottom: 2px solid var(--DARKCOLOR);
+}
+
+header {
+    top: 0;
+}
+
+nav{
+    background-color: var(--LIGHTCOLOR);
+    color: var(--DARKCOLOR);
+    padding: var(--PADDING);
+    border-bottom: var(--BORDER);
+    box-shadow: var(--SHADOWS) ;/* x-offset  y-offset blur spread-value color */
+}
+
+main{
+    flex-grow: 1;
+
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: min(4vw, 15px)
+}
+
+footer{
+    bottom:0;
+}
+
+/* || FETURES */
+
+.square--highlight {
+    --SQUARE-BGCOLOR: cornflowerblue;
+}
+
+.square {
+    background-color: var(--SQUARE-BGCOLOR);
+    width: var(--SQUARE-SIZE);
+    height: var(--SQUARE-SIZE);
+    border: var(--BORDER);
+    border-radius: 15px;
+    display: grid;
+    place-content: center;
+    font-size: var(--FS_XL);
+    box-shadow: var(--SHADOWS);
+    
+}
+
+/* || SMALL */
+
+/* Syntax:
+@media media type and(logical operator) (condition : vreakpoint) {
+    //CSS rules
+} */
+
+/* @media screen and (min-width: 576px) { /* or (orientation: landscape) or (min-aspect-ratio: 7/4) */
+    /* body{
+        background-color: green;
+        background-image: radial-gradient(whitesmoke, green);
+    }
+    nav{
+        display: none;
+    }
+} */
+
+/* //medium */
+/* @media screen and (min-width: 768px) { /* or (orientation: landscape) or (min-aspect-ratio: 7/4) */
+    /* body{
+        background-color: rgb(159, 255, 23);
+        background-image: radial-gradient(whitesmoke, rgb(159, 255, 23));
+    }
+    nav{
+        display: none;
+    } */
+/* } */ 
+
+/* //large */
+/* @media screen and (min-width: 992px) { or (orientation: landscape) or (min-aspect-ratio: 7/4) */
+    /* body{
+        background-color: firebrick;
+        background-image: radial-gradient(whitesmoke, firebrick);
+    }
+    nav{
+        display: none;
+    }
+} */
+
+/* //XL */
+/* @media screen and (min-width: 1200px) { or (orientation: landscape) or (min-aspect-ratio: 7/4) */
+    /* body{
+        background-color: rebeccapurple;
+        background-image: radial-gradient(whitesmoke, rebeccapurple);
+    }
+    nav{
+        display: none;
+    }
+} */
+
+/* // MOBILE DEVICE LANDSCAPE */
+/* @media screen and (min-height: 425px) and (min-aspect-ratio: 7/4) { or (orientation: landscape) or (min-aspect-ratio: 7/4) */
+    /* body{
+        background-color: dodgerblue;
+        background-image: radial-gradient(whitesmoke, dodgerblue);
+    }
+    h1,h2 {
+        font-size: 1.5rem;
+    }
+    nav {
+        display: none;
+    } 
+} */

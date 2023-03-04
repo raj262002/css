@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+
+/* begin reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+
+    /* img element is inline element not block level element */
+
+    display: block; /* you know block element takes the full width of page */
+}
+/* end reset */
+.nowrap {
+    white-space: nowrap; /* i am jane should not break */
+}
+
+.offscreen {
+    position: absolute;
+    left: -100000px;
+}
+
+/* utility classes */
+
+
+/* end of  utility classes */
+
+
+body {
+    font-family: "Nunito" , sans-serif;
+    min-height: 100vh;
+    background-color: aliceblue;
+
+    /*bubble background */
+    
+    background-image: linear-gradient( to left, steelblue,#fff); /*default top to below*/
+    background-image: url('../Image\ styling/bubbles.png'), linear-gradient(to left, steelblue,#fff); /*using two images at the same time  */
+    background-repeat: repeat-y, no-repeat;
+    background-position: right center;
+    background-size: 20%, auto; /* url(),gradient */
+
+    /* background: repeat-y right center url('../Image\ styling/bubbles.png') , no-repeat linear-gradient( to left, steelblue,#fff);
+    background-size: 20%, auto; does the same work as above in short hand*/
+    
+}
+
+.container {
+    background-color: rgb(251, 210,156);
+    background-image: url('../Image\ styling/map-2176x1451.png');
+    /* background-repeat: no-repeat;  : repeat is default and repeatx and repeaty can also be set */
+    background-repeat: repeat;
+    background-position: top right; /* x and y position */
+    background-size: cover; /* it will also make image responsive to browser window size */
+    /* background : contain ; it uses the full image but doesn't cover the whole background  */
+}
+
+.hero {
+    border: 2px solid #000;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+
+    background-color: hsla(0,0%,100%,0.35);
+}
+
+.h1 {
+    font-size: 500%;
+    color: aliceblue;
+    text-shadow: 2px 2px 5px #000; /* x-axis, y-axis, blur amount, color of shadow */
+
+    /* background-color: #00000046;
+    padding: 0.25rem;
+    border-radius: 10px;*/
+
+} 
+
+.profile-pic-figure {
+    width: 35%; /* width of the page or container */
+}
+
+.profile-pic-figure img {
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px double gray;
+    border-radius: 50%;
+}
+
+.example {
+    margin-top: 1rem;
+    padding-left: 20px;
+    border: 1 px solid red;
+}
+
+.example img {
+    width: 25%; /* 25% of container size . percent width to make omg responsive */
+    height: auto;
+
+}
+
+.clip{
+    font-weight: 800;
+    font-size: 18rem;
+    text-align: center;
+    background-image: url(../Image\ styling/scenic-2200x1331.png);
+    background-size: 100%;
+    text-transform: uppercase;
+
+    -webkit-background-clip: text;
+    background-clip: text; /* fallback line if it doesn't work in any browser */
+    color: hsla(0, 0%, 0%, 0.208);/* alpha matte through text */
+
+}
+
+
+/* ////////////////////////////// */
+
+/* visit caniuse.com for css validations */
+
+/* ////////////////////////////// */
